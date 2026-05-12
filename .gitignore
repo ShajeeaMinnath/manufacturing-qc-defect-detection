@@ -1,0 +1,7 @@
+data/
+notebooks/.ipynb_checkpoints/
+__pycache__/
+*.pth
+*.h5
+.env
+venv/
