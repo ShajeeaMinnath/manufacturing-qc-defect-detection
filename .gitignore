@@ -1,0 +1,53 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.eggs/
+*.egg
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Virtual environments
+venv/
+env/
+.venv/
+.env/
+
+# Data — do NOT commit raw dataset (large files)
+data/
+*.zip
+*.tar.gz
+*.tar.bz2
+
+# Model weights (large binary files — use Git LFS or store separately)
+src/saved_models/*.pth
+app/saved_models/*.pth
+*.pth
+*.pt
+*.pkl
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+logs/
+*.log
+wandb/
+runs/
+
+# Temp
+tmp/
+temp/
+.cache/
