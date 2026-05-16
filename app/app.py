@@ -149,7 +149,7 @@ class GradCAM:
 @st.cache_resource
 def load_models():
     device = torch.device("cpu")
-    save_dir = Path("saved_models")
+    save_dir = Path(__file__).parent / "saved_models"
 
     def get_actual_weights(model_folder):
         # Possible locations for the actual binary file
