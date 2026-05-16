@@ -151,44 +151,35 @@ def load_models():
     device = torch.device("cpu")
     save_dir = Path(__file__).parent / "saved_models"
 
-    def get_actual_weights(model_folder):
-        # Possible locations for the actual binary file
-        options = [
-            save_dir / model_folder / ".data" / "data",   # Newest PyTorch format
-            save_dir / model_folder / "data",            # Alternate format
-            save_dir / model_folder / model_folder.replace(".pth", ""), # Nested folder
-            save_dir / model_folder                      # Single file
-        ]
-        for opt in options:
-            if opt.is_file():
-                return opt
-        return None
+    required_files = [
+        save_dir / "resnet50_best.pth",
+        save_dir / "autoencoder_best.pth",
+        save_dir / "ae_threshold.txt",
+        save_dir / "class_mapping.txt"
+    ]
 
-    # Get paths
-    resnet_path = get_actual_weights("resnet50_best.pth")
-    ae_path = get_actual_weights("customcnn_best.pth")
+    for file in required_files:
+        if not file.exists():
+            st.error(f"Missing required file: {file}")
+            st.stop()
 
-    if not resnet_path or not ae_path:
-        st.error(f"Could not find model weights. Path checked: {save_dir}")
-        st.stop()
-
-    # Load ResNet
     resnet = ResNet50Classifier(2)
-    resnet.load_state_dict(torch.load(resnet_path, map_location=device, weights_only=False), strict=False)
+    resnet.load_state_dict(torch.load(save_dir / "resnet50_best.pth", map_location=device))
     resnet.eval()
-    
-    # Load Autoencoder (using customcnn as backup)
+
     autoencoder = ConvAutoencoder(512)
-    autoencoder.load_state_dict(torch.load(ae_path, map_location=device, weights_only=False), strict=False)
+    autoencoder.load_state_dict(torch.load(save_dir / "autoencoder_best.pth", map_location=device))
     autoencoder.eval()
-    
-    # Load metadata
+
     with open(save_dir / "ae_threshold.txt", "r") as f:
-        ae_threshold = float(f.read().strip())
+        ae_threshold = float(f.read())
+
     with open(save_dir / "class_mapping.txt", "r") as f:
-        class_mapping = ast.literal_eval(f.read().strip())
-        
+        class_mapping = ast.literal_eval(f.read())
+
     return resnet, autoencoder, ae_threshold, class_mapping
+
+
 # ============================================================
 # PREPROCESSING (FIXED)
 # ============================================================
