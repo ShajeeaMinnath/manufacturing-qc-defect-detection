@@ -51,3 +51,7 @@ runs/
 tmp/
 temp/
 .cache/
+
+data/*
+!data/sample_images/
+!data/sample_images/.gitkeep
