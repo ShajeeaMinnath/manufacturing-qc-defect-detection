@@ -115,6 +115,22 @@ Manufacturing quality control is critical for reducing waste and ensuring produc
 **Grad-CAM IoU with ground truth masks:** 0.72 (ResNet-50)
 
 ---
+### Screenshots
+
+**Home — App Interface**
+
+![App_Interface](https://github.com/user-attachments/assets/805e06a7-859f-4787-a71e-a3cb4b8a2815) 
+
+
+**Normal Result**
+
+![Normal Result](https://github.com/user-attachments/assets/715119c2-a9c8-489a-81c3-b0da57a82532)
+
+**Defective Result**
+
+![Defective Result](https://github.com/user-attachments/assets/1cc38e6b-c7df-4421-908e-7a0725f0ae36)
+
+---
 
 ## 🏗️ Architecture Diagram
 
