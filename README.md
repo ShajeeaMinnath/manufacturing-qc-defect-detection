@@ -7,16 +7,12 @@
 
 ## 👥 Team Members
 
-| Name | GitHub Username | Role |
-|------|----------------|------|
-| Member 1 | @member1 | Problem Definition, EDA, Documentation |
-| Member 2 | @member2 | Data Collection, Preprocessing, Feature Engineering |
-| Member 3 | @member3 | Model Building (CNN), Model Evaluation |
-| Member 4 | @member4 | Autoencoder, Grad-CAM, Deployment |
+| Name |  Role |
+|------|------|
+| Shajeea Minnath A T| Problem Definition, EDA, Documentation,Data Collection,|
+| Umaparvathy |  Preprocessing, Feature Engineering,Model Building (CNN) |
+| Akshay |  Model Evaluation,Autoencoder, Grad-CAM, Deployment |
 
-**Course:** [Your Course Name]  
-**Instructor:** [Instructor Name]  
-**Submission Date:** [Date]
 
 ---
 
@@ -97,7 +93,7 @@ Manufacturing quality control is critical for reducing waste and ensuring produc
 - Autoencoder reconstruction error score
 - Grad-CAM heatmap overlay displayed
 - Batch CSV upload for industrial use
-- Live URL: **[https://your-app.streamlit.app](https://your-app.streamlit.app)**
+- Live URL: **https://manufacturing-qc-defect-detection-jdr3x3phepsh2adnjxee3s.streamlit.app/**
 
 ### Stage 10: Documentation
 - This README with all sections
@@ -117,19 +113,6 @@ Manufacturing quality control is critical for reducing waste and ensuring produc
 
 **Best Model:** ResNet-50 fine-tuned — best balance of precision and recall  
 **Grad-CAM IoU with ground truth masks:** 0.72 (ResNet-50)
-
----
-
-## 🖼️ Screenshots
-
-### Streamlit App — Image Upload & Prediction
-![App Screenshot 1](assets/screenshot_upload.png)
-
-### Streamlit App — Grad-CAM Heatmap
-![App Screenshot 2](assets/screenshot_gradcam.png)
-
-### EDA — Sample Images & Defect Types
-![EDA](assets/eda_samples.png)
 
 ---
 
@@ -196,14 +179,6 @@ notebooks/
 cd app/
 streamlit run app.py
 ```
-
----
-
-## 🔗 Links
-
-- 🚀 **Live App:** [https://your-app.streamlit.app](https://your-app.streamlit.app)
-- 📁 **GitHub Repo:** [https://github.com/yourusername/defect-detection](https://github.com/yourusername/defect-detection)
-- 📊 **Dataset:** [MVTec AD](https://www.mvtec.com/company/research/datasets/mvtec-ad)
 
 ---
 
