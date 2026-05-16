@@ -242,7 +242,7 @@ def main():
         )
         show_gradcam = st.checkbox("Show Grad-CAM", value=True)
         st.markdown("---")
-        st.write("Balanced Logic: ResNet Primary | AE Assist >0.145")
+        st.write(f"AE Threshold: {AE_THRESHOLD:.6f}")
 
     uploaded = st.file_uploader("Upload Product Image", type=["png", "jpg", "jpeg"])
 
@@ -267,10 +267,7 @@ def main():
             mse = torch.nn.functional.mse_loss(recon, ae_tensor).item()
 
         # Hybrid Decision
-        is_defective = (
-    (defective_prob >= threshold) or
-    ((mse > 0.145) and (defective_prob > 0.10))
-)
+        is_defective = (mse > AE_THRESHOLD) or (defective_prob >= threshold)
 
         # GradCAM
         if show_gradcam:
