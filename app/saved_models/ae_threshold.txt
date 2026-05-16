@@ -1,2 +1,5 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> ec84441 (Member A: Created individual_profiles)
 0.005
