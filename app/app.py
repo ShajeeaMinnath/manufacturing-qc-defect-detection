@@ -251,7 +251,7 @@ def main():
         )
         show_gradcam = st.checkbox("Show Grad-CAM", value=True)
         st.markdown("---")
-        st.write("AE Logic: >0.125 Sensitive | >0.18 Severe")
+        st.write("Balanced Logic: ResNet Primary | AE Assist >0.145")
 
     uploaded = st.file_uploader("Upload Product Image", type=["png", "jpg", "jpeg"])
 
@@ -277,10 +277,8 @@ def main():
 
         # Hybrid Decision
         is_defective = (
-    (mse > 0.18) or
     (defective_prob >= threshold) or
-    ((mse > 0.12) and (defective_prob > 0.02)) or
-    (mse > 0.125)
+    ((mse > 0.145) and (defective_prob > 0.10))
 )
 
         # GradCAM
