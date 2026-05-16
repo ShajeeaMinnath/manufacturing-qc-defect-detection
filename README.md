@@ -119,16 +119,16 @@ Manufacturing quality control is critical for reducing waste and ensuring produc
 
 **Home — App Interface**
 
-![App_Interface](https://github.com/user-attachments/assets/805e06a7-859f-4787-a71e-a3cb4b8a2815) 
+![Streamlit App Interface](https://github.com/ShajeeaMinnath/manufacturing-qc-defect-detection/raw/5a00c44716d13cadee0ec44b6b4732cb653fc42f/assets/App%20interface.jpeg)
 
 
 **Normal Result**
 
-![Normal Result](https://github.com/user-attachments/assets/715119c2-a9c8-489a-81c3-b0da57a82532)
+![Normal App Interface](https://github.com/ShajeeaMinnath/manufacturing-qc-defect-detection/raw/5a00c44716d13cadee0ec44b6b4732cb653fc42f/assets/App%20interface.jpeg)
 
 **Defective Result**
 
-![Defective Result](https://github.com/user-attachments/assets/1cc38e6b-c7df-4421-908e-7a0725f0ae36)
+![Defective Prediction Result](https://github.com/ShajeeaMinnath/manufacturing-qc-defect-detection/raw/5a00c44716d13cadee0ec44b6b4732cb653fc42f/assets/Defective%20Result.jpeg)
 
 ---
 
